@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'RedactionRegular';
-  src: url('fonts/Redaction50-Regular.ttf') format('ttf');
+  src: url('fonts/Redaction50-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'RedactionBold';
-  src: url('fonts/Redaction50-Bold.ttf') format('ttf');
+  src: url('fonts/Redaction50-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'RedactionItalic';
-  src: url('fonts/Redaction50-Italic.ttf') format('ttf');
+  src: url('fonts/Redaction50-Italic.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
   font-display: swap;
