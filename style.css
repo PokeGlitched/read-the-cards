@@ -26,6 +26,10 @@ body {
     background-color: #4d0000;
 }
 
+header {
+    text-align: center;
+}
+
 h1 {
     color: white;
     font-family: "RedactionBold";
