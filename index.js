@@ -1,7 +1,14 @@
 
 // Variables
 
-let cardIcons = []
+let gameDeck = []
+let cardIcons = ["moon", "sun", "hand", "eye", "skull", "spider", "ghost", "zombie", "bat", "witchhat", "cauldron", "web", "broom", "grave", "potion"]
+
+for (let i = 0; i < cardIcons.length; i++) {
+    gameDeck.push(cardIcons[i])
+    gameDeck.push(cardIcons[i])
+}
+
 let chosenCards = []
 let matchedCount = 0
 let attemptsRemaining = 10
