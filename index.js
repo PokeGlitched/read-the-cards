@@ -9,6 +9,8 @@ for (let i = 0; i < cardIcons.length; i++) {
     gameDeck.push(cardIcons[i])
 }
 
+gameDeck.sort(() => Math.random() - 0.5)
+
 let chosenCards = []
 let matchedCount = 0
 let attemptsRemaining = 10
