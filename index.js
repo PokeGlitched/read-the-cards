@@ -14,4 +14,5 @@ attemptsDisplay.textContent = attemptsRemaining
 let matchesDisplay = document.getElementById("matchesleft")
 matchesDisplay.textContent = matchesRemaining
 
-let time
+let timeDisplay = document.getElementById("timeleft")
+timeDisplay.textContent = timeLeft
