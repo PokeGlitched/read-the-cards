@@ -39,12 +39,30 @@ for (let i = 0; i < gameDeck.length; i++) {
 
     if (chosenCards.includes(card)) {
             return
-        }
-        else{
+        } else {
             chosenCards.push(card)
             card.textContent = card.dataset.icon
             console.log(chosenCards)
-            }
-    
+        }
+    if (chosenCards.length === 2) {
+        if (chosenCards[0].dataset.icon === chosenCards[1].dataset.icon) {
+            matchedCount += 1
+            attemptsRemaining -= 1
+            chosenCards.pop()
+            chosenCards.pop()
+            attemptsDisplay.textContent = attemptsRemaining
+        } else {
+            setTimeout(() => {
+                chosenCards[0].textContent = "?"
+                chosenCards[1].textContent = "?" 
+                chosenCards.pop()
+                chosenCards.pop()
+            }, 500)
+            
+            attemptsRemaining -= 1
+
+            attemptsDisplay.textContent = attemptsRemaining
+        }
+    }
 })
 }
