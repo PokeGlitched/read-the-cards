@@ -16,7 +16,7 @@ matchesDisplay.textContent = matchedCount
 let timeDisplay = document.getElementById("timeleft")
 timeDisplay.textContent = timeLeft
 
-let cardIcons = ["moon", "sun", "hand", "eye", "skull", "spider", "ghost", "zombie", "bat", "witchhat", "cauldron", "web", "broom", "grave", "potion"]
+let cardIcons = ["Moon", "Sun", "Hand", "Eye", "Skull", "Spider", "Ghost", "Zombie", "Bat", "Witch Hat", "Cauldron", "Spider Web", "Broom", "Gravestone", "Potion"]
 let gameDeck = []
 
 for (let i = 0; i < cardIcons.length; i++) {
