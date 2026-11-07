@@ -31,8 +31,8 @@ for (let i = 0; i < gameDeck.length; i++) {
     
     card.dataset.icon = gameDeck[i]
     card.classList.add("card")
-
     gameBoard.appendChild(card)
+    card.textContent = "?"
     
     card.addEventListener("click", () => {
         // console.log("clicked", card.dataset.icon, "!")
