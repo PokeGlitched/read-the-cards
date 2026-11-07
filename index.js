@@ -36,5 +36,6 @@ for (let i = 0; i < gameDeck.length; i++) {
     
     card.addEventListener("click", () => {
     console.log("clicked", card.dataset.icon, "!")
+    card.textContent = card.dataset.icon
 })
 }
