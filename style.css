@@ -58,3 +58,10 @@ p {
   grid-template-rows: repeat(5, 1fr);
   gap: 20px
 }
+
+#matchesleft {
+    color: #e4b21b;
+    font-family: "RedactionBold";
+    font-size: 24px;
+    text-shadow: 0 0 8px #e4b21b80;
+}
