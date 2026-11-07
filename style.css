@@ -43,7 +43,13 @@ p {
 .card {
   background-color: #310000;
   border: 2px solid #e4b21b;
-  height: 100px
+  height: 100px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "RedactionItalic";
 }
 
 #gameboard {

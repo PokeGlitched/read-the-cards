@@ -35,7 +35,7 @@ for (let i = 0; i < gameDeck.length; i++) {
     gameBoard.appendChild(card)
     
     card.addEventListener("click", () => {
-    console.log("clicked", card.dataset.icon, "!")
-    card.textContent = card.dataset.icon
+        // console.log("clicked", card.dataset.icon, "!")
+        card.textContent = card.dataset.icon
 })
 }
