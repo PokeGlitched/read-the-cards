@@ -35,14 +35,16 @@ for (let i = 0; i < gameDeck.length; i++) {
     card.textContent = "?"
     
     card.addEventListener("click", () => {
-        // console.log("clicked", card.dataset.icon, "!")
-        card.textContent = card.dataset.icon
+        console.log("clicked", card.dataset.icon, "!") 
 
-        if (chosenCards.includes(card)) {
+    if (chosenCards.includes(card)) {
             return
         }
-        else {
+        else{
             chosenCards.push(card)
-        }
+            card.textContent = card.dataset.icon
+            console.log(chosenCards)
+            }
+    
 })
 }
