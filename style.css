@@ -24,6 +24,11 @@
 
 body {
     background-color: #4d0000;
+    height: calc(100vh - 20px);
+    margin-left: 5;
+    margin-right: 5;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -43,6 +48,8 @@ p {
 .card {
   background-color: #310000;
   border: 2px solid #e4b21b;
+  width: 100%;
+  height: 100%;
   color: white;
   text-align: center;
   display: flex;
@@ -64,9 +71,11 @@ p {
 
 #gameboard {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 20px
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
 }
 
 #matchesleft {
