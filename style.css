@@ -71,6 +71,8 @@ p.smalltext {
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.2s ease;
+  width: 100%;
+  height: 100%;
 }
 
 .card-face {
@@ -78,13 +80,26 @@ p.smalltext {
   top: 0;
   left: 0;
   backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
 
 .card-front {
   transform: rotateY(180deg);
 }
 
-.card.flipped .card.inner {
+.card.flipped .card-inner {
   transform: rotateY(180deg);
 }
 
@@ -92,6 +107,7 @@ p.smalltext {
     color: white;
     font-family: "RedactionItalic";
     margin: 0;
+    text-align: center;
 }
 
 .card:hover {

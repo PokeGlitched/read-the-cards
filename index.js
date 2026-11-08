@@ -74,15 +74,13 @@ for (let i = 0; i < gameDeck.length; i++) {
     front.classList.add("card-front", "card-face")
     if (gameDeck[i] in iconImages) {
         frontImage.src = iconImages[gameDeck[i]]
+        front.appendChild(frontImage)
     } else {
         let fallbackText = document.createElement("p");
-        fallbackText.textContent = "?";
+        fallbackText.textContent = gameDeck[i];
         fallbackText.classList.add("card-fallback")
         front.appendChild(fallbackText);
     }
-
-
-    front.appendChild(frontImage)
     
     let backImage = document.createElement("img")
     backImage.src = "assets/card_back.png"
@@ -110,7 +108,7 @@ for (let i = 0; i < gameDeck.length; i++) {
             return
         } else {
             chosenCards.push(card)
-            card.textContent = card.dataset.icon
+            card.classList.add("flipped");
             console.log(chosenCards)
         }
     if (chosenCards.length === 2) {
@@ -138,8 +136,8 @@ for (let i = 0; i < gameDeck.length; i++) {
             lockBoard = false
         } else {
             setTimeout(() => {
-                chosenCards[0].textContent = "?"
-                chosenCards[1].textContent = "?" 
+                chosenCards[0].classList.remove("flipped")
+                chosenCards[1].classList.remove("flipped")
                 chosenCards.pop()
                 chosenCards.pop()
                 timeLeft = Math.max(0, (timeLeft - 2))
