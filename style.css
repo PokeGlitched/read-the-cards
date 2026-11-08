@@ -64,7 +64,7 @@ p {
   box-shadow: 0 0 12px #e4b21b80;
 }
 
-.card.matched {
+.card.matched { 
   opacity: 0.5;
   border: 2px solid #4d0000;
 }

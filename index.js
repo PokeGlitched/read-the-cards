@@ -53,6 +53,9 @@ for (let i = 0; i < gameDeck.length; i++) {
         lockBoard = true
         if (chosenCards[0].dataset.icon === chosenCards[1].dataset.icon) {
             matchedCount += 1
+            if (matchedCount === matchesPossible) {
+                console.log("YOU WIN!")
+            }
             matchesDisplay.textContent = matchesPossible - matchedCount
             chosenCards[0].dataset.matched = "true"
             chosenCards[1].dataset.matched = "true" 
