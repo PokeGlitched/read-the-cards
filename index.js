@@ -8,7 +8,7 @@ let timeLeft = 10
 let gameBoard = document.getElementById("gameboard")
 let cardIcons = ["Moon", "Sun", "Hand", "Eye", "Skull", "Spider", "Ghost", "Zombie", "Bat", "Witch Hat", "Cauldron", "Spider Web", "Broom", "Gravestone", "Potion"]
 let matchesPossible = cardIcons.length
-
+let gameOver = false
 let attemptsDisplay = document.getElementById("attemptsleft")
 attemptsDisplay.textContent = attemptsRemaining
 
@@ -39,7 +39,7 @@ for (let i = 0; i < gameDeck.length; i++) {
     
     card.addEventListener("click", () => {
         console.log("clicked", card.dataset.icon, "!") 
-    if (lockBoard || card.dataset.matched === "true") {
+    if (lockBoard || gameOver || card.dataset.matched === "true") {
         return
     }
     if (chosenCards.includes(card)) {
@@ -55,6 +55,7 @@ for (let i = 0; i < gameDeck.length; i++) {
             matchedCount += 1
             if (matchedCount === matchesPossible) {
                 console.log("YOU WIN!")
+                gameOver = true
             }
             matchesDisplay.textContent = matchesPossible - matchedCount
             chosenCards[0].dataset.matched = "true"
@@ -76,6 +77,10 @@ for (let i = 0; i < gameDeck.length; i++) {
             }, 500)
             
             attemptsRemaining -= 1
+            if (attemptsRemaining === 0 && matchedCount !== matchesPossible) {
+                console.log("you lose :(")
+                gameOver = false
+            }
 
             attemptsDisplay.textContent = attemptsRemaining
         }
