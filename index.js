@@ -172,7 +172,7 @@ function resetGame() {
         chosenCards = []
         lockBoard = false
         gameOver = false
-        timeLeft = 100
+        timeLeft = 120
 
         attemptsDisplay.textContent = attemptsRemaining
         matchesDisplay.textContent = matchesPossible - matchedCount
