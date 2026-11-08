@@ -79,7 +79,7 @@ for (let i = 0; i < gameDeck.length; i++) {
             attemptsRemaining -= 1
             if (attemptsRemaining === 0 && matchedCount !== matchesPossible) {
                 console.log("you lose :(")
-                gameOver = false
+                gameOver = true
             }
 
             attemptsDisplay.textContent = attemptsRemaining
