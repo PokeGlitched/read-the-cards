@@ -111,6 +111,17 @@ p.smalltext {
   color: white;
 }
 
+#popup button:hover {
+  background-color: #e4b21b;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-family: "RedactionItalic";
+  padding: 4px;
+  color: #4d0000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px #e4b21b80;
+}
 
 #matchesleft {
     color: #e4b21b;
