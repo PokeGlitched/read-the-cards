@@ -133,6 +133,6 @@ p.smalltext {
   flex-direction: column;
 }
 
-.hidden {
+#endscreen.hidden {
   display: none;
 }
