@@ -132,3 +132,7 @@ p.smalltext {
   gap: 10px;
   flex-direction: column;
 }
+
+.hidden {
+  display: none;
+}
