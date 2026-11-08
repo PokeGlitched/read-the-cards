@@ -83,3 +83,10 @@ p {
     font-size: 24px;
     text-shadow: 0 0 8px #e4b21b80;
 }
+
+#timeleft {
+    color: #d46b6b;
+    font-family: "RedactionBold";
+    font-size: 24px;
+    text-shadow: 0 0 8px #d46b6b80;
+}
