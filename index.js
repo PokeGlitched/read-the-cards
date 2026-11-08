@@ -10,7 +10,7 @@ let cardIcons = ["Moon", "Sun", "Hand", "Eye", "Skull", "Spider", "Ghost", "Zomb
 let matchesPossible = cardIcons.length
 let gameOver = false
 let winOrLoseDisplay = document.getElementById("winorlosehere")
-let explanDisplay = document.getElementById("just in case")
+let explanDisplay = document.getElementById("justincase")
 
 let iconImages = {
     "Sun":  "assets/icons/icon_sun.png",
