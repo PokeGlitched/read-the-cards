@@ -77,6 +77,7 @@ for (let i = 0; i < gameDeck.length; i++) {
     } else {
         let fallbackText = document.createElement("p");
         fallbackText.textContent = "?";
+        fallbackText.classList.add("card-fallback")
         front.appendChild(fallbackText);
     }
 

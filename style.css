@@ -66,6 +66,12 @@ p.smalltext {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.card-fallback {
+    color: white;
+    font-family: "RedactionBold";
+    margin: 0;
+}
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 12px #e4b21b80;
