@@ -13,6 +13,7 @@ let winOrLoseDisplay = document.getElementById("winorlosehere")
 let explanDisplay = document.getElementById("just in case")
 
 let iconImages = {
+    "Back": "assets/card_back.png",
     "Sun":  "assets/icons/icon_sun.png",
     "Moon":  "assets/icons/icon_moon.png",
     "Cauldron":  "assets/icons/icon_cauldron.png",
@@ -68,6 +69,25 @@ for (let i = 0; i < gameDeck.length; i++) {
     let card = document.createElement("div")
     
     card.dataset.icon = gameDeck[i]
+    let frontImage = document.createElement("img")
+    frontImage.src = iconImages[gameDeck[i]]
+    let front = document.createElement("div")
+    front.classList.add("card-front", "card-face")
+    front.appendChild(frontImage)
+    
+    let backImage = document.createElement("img")
+    backImage.src = iconImages[back]
+    let back = document.createElement("div")
+    back.classList.add("card-back", "card-face")
+    back.appendChild(backImage)
+
+    let inner = document.createElement("div")
+    inner.classList.add("card-inner")
+    inner.appendChild(front)
+    inner.appendChild(back)
+
+    card.appendChild(inner)
+
     card.dataset.matched = "false"
     card.classList.add("card")
     gameBoard.appendChild(card)
