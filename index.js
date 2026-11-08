@@ -76,7 +76,7 @@ for (let i = 0; i < gameDeck.length; i++) {
         frontImage.src = iconImages[gameDeck[i]]
     } else {
         let fallbackText = document.createElement("p");
-        fallbackText.textContent = gameDeck[i];
+        fallbackText.textContent = "?";
         front.appendChild(fallbackText);
     }
 
