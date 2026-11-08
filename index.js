@@ -12,6 +12,14 @@ let gameOver = false
 let winOrLoseDisplay = document.getElementById("winorlosehere")
 let explanDisplay = document.getElementById("just in case")
 
+let iconImages = {
+    "Sun":  "assets/icons/icon_sun.png",
+    "Moon":  "assets/icons/icon_moon.png",
+    "Cauldron":  "assets/icons/icon_cauldron.png",
+    "Spider Web":  "assets/icons/icon_spiderweb.png",
+    "Gravestone":  "assets/icons/icon_gravestone.png",
+}
+
 let timer 
 
 function startTimer() {
