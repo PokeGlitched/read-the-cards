@@ -45,6 +45,12 @@ p {
     font-family: "RedactionRegular";
 }
 
+p.smalltext {
+    color: #e4b21b;
+    font-family: "RedactionRegular";
+    font-size: small;
+}
+
 .card {
   background-color: #310000;
   border: 2px solid #e4b21b;
@@ -111,4 +117,18 @@ p {
   border: 1px solid #e4b21b;
   border-radius: 8px;
   padding: 10px 18px;
+}
+
+#endscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
 }
