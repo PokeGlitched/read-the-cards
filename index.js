@@ -24,7 +24,7 @@ timeDisplay.textContent = timeLeft
 let endScreen = document.getElementById("endscreen")
 
 function buildBoard() {
-
+console.log("running buildBoard()")
 let gameDeck = []
 
 for (let i = 0; i < cardIcons.length; i++) {
@@ -106,7 +106,7 @@ function resetGame() {
         chosenCards = []
         lockBoard = false
         gameOver = false
-        timeleft = 10
+        timeLeft = 10
 
         attemptsDisplay.textContent = attemptsRemaining
         matchesDisplay.textContent = matchesPossible - matchedCount
