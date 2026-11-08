@@ -4,12 +4,30 @@ let chosenCards = []
 let matchedCount = 0
 let attemptsRemaining = 25
 let lockBoard = false
-let timeLeft = 10
+let timeLeft = 100
 let gameBoard = document.getElementById("gameboard")
 let cardIcons = ["Moon", "Sun", "Hand", "Eye", "Skull", "Spider", "Ghost", "Zombie", "Bat", "Witch Hat", "Cauldron", "Spider Web", "Broom", "Gravestone", "Potion"]
 let matchesPossible = cardIcons.length
 let gameOver = false
+let winOrLoseDisplay = document.getElementById("winorlosehere")
+let explanDisplay = document.getElementById("just in case")
 
+let timer 
+
+function startTimer() {
+
+timer = setInterval( () => {
+                timeLeft -= 1
+                
+                timeDisplay.textContent = timeLeft
+                if (timeLeft === 0) {
+                    clearInterval(timer)
+                    gameOver = true
+                    endScreen.classList.remove("hidden")
+                    
+                }
+            }, 1000)
+        }
 let restartButton = document.getElementById("restartbutton")
 
 let attemptsDisplay = document.getElementById("attemptsleft")
@@ -65,6 +83,8 @@ for (let i = 0; i < gameDeck.length; i++) {
                 console.log("YOU WIN!")
                 gameOver = true
                 endScreen.classList.remove("hidden")
+                winOrLoseDisplay.textContent = "ENDURED"
+                explanDisplay.textContent = "won"
             }
             matchesDisplay.textContent = matchesPossible - matchedCount
             chosenCards[0].dataset.matched = "true"
@@ -75,6 +95,8 @@ for (let i = 0; i < gameDeck.length; i++) {
             chosenCards.pop()
             chosenCards.pop()
             attemptsDisplay.textContent = attemptsRemaining
+            timeLeft += 3
+            timeDisplay.textContent = timeLeft
             lockBoard = false
         } else {
             setTimeout(() => {
@@ -82,11 +104,20 @@ for (let i = 0; i < gameDeck.length; i++) {
                 chosenCards[1].textContent = "?" 
                 chosenCards.pop()
                 chosenCards.pop()
+                timeLeft -= Math.max(0, timeLeft - 2)
+                if (timeLeft === 0) {
+                    clearInterval(timer)
+                    gameOver = true
+                    endScreen.classList.remove("hidden")    
+                }
+                timeDisplay.textContent = timeLeft
                 lockBoard = false            
                 if (attemptsRemaining === 0 && matchedCount !== matchesPossible) {
                 console.log("you lose :(")
                 gameOver = true
                 endScreen.classList.remove("hidden")
+                winOrLoseDisplay.textContent = "SUCCUMBED TO"
+                explanDisplay.textContent = "lost"
             }
             }, 500)
             attemptsRemaining -= 1
@@ -106,13 +137,14 @@ function resetGame() {
         chosenCards = []
         lockBoard = false
         gameOver = false
-        timeLeft = 10
+        timeLeft = 100
 
         attemptsDisplay.textContent = attemptsRemaining
         matchesDisplay.textContent = matchesPossible - matchedCount
         timeDisplay.textContent = timeLeft
 
         buildBoard()
+        startTimer()
 
         endScreen.classList.add("hidden")
         
@@ -122,5 +154,6 @@ restartButton.addEventListener("click", () => {
     resetGame()
 })
 
-buildBoard()
 
+buildBoard()
+startTimer()
