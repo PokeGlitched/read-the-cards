@@ -24,6 +24,8 @@ timer = setInterval( () => {
                     clearInterval(timer)
                     gameOver = true
                     endScreen.classList.remove("hidden")
+                    winOrLoseDisplay.textContent = "SUCCUMBED TO"
+                    explanDisplay.textContent = "lost"
                     
                 }
             }, 1000)
@@ -104,7 +106,7 @@ for (let i = 0; i < gameDeck.length; i++) {
                 chosenCards[1].textContent = "?" 
                 chosenCards.pop()
                 chosenCards.pop()
-                timeLeft -= Math.max(0, timeLeft - 2)
+                timeLeft = Math.max(0, (timeLeft - 2))
                 if (timeLeft === 0) {
                     clearInterval(timer)
                     gameOver = true
