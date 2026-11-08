@@ -23,6 +23,8 @@ timeDisplay.textContent = timeLeft
 
 let endScreen = document.getElementById("endscreen")
 
+function buildBoard() {
+
 let gameDeck = []
 
 for (let i = 0; i < cardIcons.length; i++) {
@@ -31,6 +33,8 @@ for (let i = 0; i < cardIcons.length; i++) {
 }
 
 gameDeck.sort(() => Math.random() - 0.5)
+
+
 
 for (let i = 0; i < gameDeck.length; i++) {
     let card = document.createElement("div")
@@ -90,9 +94,11 @@ for (let i = 0; i < gameDeck.length; i++) {
         }
     }
     })
-    }
+}
 
-    function resetGame() {
+}
+
+function resetGame() {
         gameBoard.innerHTML = ""
 
         matchedCount = 0
@@ -105,8 +111,11 @@ for (let i = 0; i < gameDeck.length; i++) {
         attemptsDisplay.textContent = attemptsRemaining
         matchesDisplay.textContent = matchesPossible - matchedCount
         timeDisplay.textContent = timeLeft
+
+        endScreen.classList.add("hidden")
     }
 
     restartButton.addEventListener("click", () => {
         resetGame()
     })
+
