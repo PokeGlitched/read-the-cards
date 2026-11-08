@@ -18,6 +18,7 @@ matchesDisplay.textContent = matchesPossible - matchedCount
 let timeDisplay = document.getElementById("timeleft")
 timeDisplay.textContent = timeLeft
 
+let endScreen = document.getElementById("endscreen")
 
 let gameDeck = []
 
@@ -56,6 +57,7 @@ for (let i = 0; i < gameDeck.length; i++) {
             if (matchedCount === matchesPossible) {
                 console.log("YOU WIN!")
                 gameOver = true
+                endScreen.classList.remove("hidden")
             }
             matchesDisplay.textContent = matchesPossible - matchedCount
             chosenCards[0].dataset.matched = "true"
@@ -77,6 +79,7 @@ for (let i = 0; i < gameDeck.length; i++) {
                 if (attemptsRemaining === 0 && matchedCount !== matchesPossible) {
                 console.log("you lose :(")
                 gameOver = true
+                endScreen.classList.remove("hidden")
             }
             }, 500)
             attemptsRemaining -= 1
