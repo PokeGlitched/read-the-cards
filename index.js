@@ -73,15 +73,13 @@ for (let i = 0; i < gameDeck.length; i++) {
                 chosenCards[1].textContent = "?" 
                 chosenCards.pop()
                 chosenCards.pop()
-                lockBoard = false
-            }, 500)
-            
-            attemptsRemaining -= 1
-            if (attemptsRemaining === 0 && matchedCount !== matchesPossible) {
+                lockBoard = false            
+                if (attemptsRemaining === 0 && matchedCount !== matchesPossible) {
                 console.log("you lose :(")
                 gameOver = true
             }
-
+            }, 500)
+            attemptsRemaining -= 1
             attemptsDisplay.textContent = attemptsRemaining
         }
     }
