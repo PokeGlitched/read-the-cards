@@ -2,7 +2,7 @@
 // Variables
 let chosenCards = []
 let matchedCount = 0
-let attemptsRemaining = 25
+let attemptsRemaining = 10
 let lockBoard = false
 let timeLeft = 100
 let gameBoard = document.getElementById("gameboard")
@@ -127,7 +127,6 @@ for (let i = 0; i < gameDeck.length; i++) {
             chosenCards[1].dataset.matched = "true" 
             chosenCards[0].classList.add("matched")
             chosenCards[1].classList.add("matched")
-            attemptsRemaining -= 1
             chosenCards.pop()
             chosenCards.pop()
             attemptsDisplay.textContent = attemptsRemaining
