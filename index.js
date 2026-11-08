@@ -56,6 +56,8 @@ for (let i = 0; i < gameDeck.length; i++) {
             matchesDisplay.textContent = matchesPossible - matchedCount
             chosenCards[0].dataset.matched = "true"
             chosenCards[1].dataset.matched = "true" 
+            chosenCards[0].classList.add("matched")
+            chosenCards[1].classList.add("matched")
             attemptsRemaining -= 1
             chosenCards.pop()
             chosenCards.pop()
