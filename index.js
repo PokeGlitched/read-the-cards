@@ -2,7 +2,7 @@
 // Variables
 let chosenCards = []
 let matchedCount = 0
-let attemptsRemaining = 15
+let attemptsRemaining = 25
 let lockBoard = false
 let timeLeft = 100
 let gameBoard = document.getElementById("gameboard")
