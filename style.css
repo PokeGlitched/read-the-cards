@@ -1,0 +1,177 @@
+@font-face {
+  font-family: 'RedactionRegular';
+  src: url('fonts/Redaction50-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RedactionBold';
+  src: url('fonts/Redaction50-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RedactionItalic';
+  src: url('fonts/Redaction50-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+    background-color: #4d0000;
+    height: calc(100vh - 20px);
+    margin-left: 5;
+    margin-right: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-family: "RedactionBold";
+}
+
+p {
+    color: #e4b21b;
+    font-family: "RedactionRegular";
+}
+
+p.smalltext {
+    color: #e4b21b;
+    font-family: "RedactionRegular";
+    font-size: small;
+}
+
+.card {
+  background-color: #310000;
+  border: 2px solid #e4b21b;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "RedactionItalic";
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px #e4b21b80;
+}
+
+.card.matched { 
+  opacity: 0.5;
+  border: 2px solid #4d0000;
+}
+
+#gameboard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+}
+
+#gamescreen {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#popup {
+  background-color: #310000;
+  border: 1px solid #e4b21b;
+  border-radius: 8px;
+  padding: 10px 18px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-direction: column;
+  align-items: center;
+}
+
+#popup button {
+  background-color: #4d0000;
+  border: 1px solid #e4b21b;
+  border-radius: 4px;
+  font-family: "RedactionItalic";
+  padding: 4px;
+  color: white;
+}
+
+#popup button:hover {
+  background-color: #e4b21b;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-family: "RedactionItalic";
+  padding: 4px;
+  color: #4d0000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px #e4b21b80;
+}
+
+#matchesleft {
+    color: #e4b21b;
+    font-family: "RedactionBold";
+    font-size: 24px;
+    text-shadow: 0 0 8px #e4b21b80;
+}
+
+#attemptsleft {
+    color: #e4b21b;
+    font-family: "RedactionBold";
+    font-size: 24px;
+    text-shadow: 0 0 8px #e4b21b80;
+}
+
+#timeleft {
+    color: #d46b6b;
+    font-family: "RedactionBold";
+    font-size: 24px;
+    text-shadow: 0 0 8px #d46b6b80;
+}
+
+.topui {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.topui p {
+  background-color: #310000;
+  border: 1px solid #e4b21b;
+  border-radius: 8px;
+  padding: 10px 18px;
+}
+
+#endscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+#endscreen.hidden {
+  display: none;
+}
