@@ -43,7 +43,6 @@ p {
 .card {
   background-color: #310000;
   border: 2px solid #e4b21b;
-  height: 100px;
   color: white;
   text-align: center;
   display: flex;
@@ -89,4 +88,18 @@ p {
     font-family: "RedactionBold";
     font-size: 24px;
     text-shadow: 0 0 8px #d46b6b80;
+}
+
+.topui {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.topui p {
+  background-color: #310000;
+  border: 1px solid #e4b21b;
+  border-radius: 8px;
+  padding: 10px 18px;
 }
