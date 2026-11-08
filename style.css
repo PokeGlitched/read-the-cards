@@ -76,3 +76,10 @@ p {
     font-size: 24px;
     text-shadow: 0 0 8px #e4b21b80;
 }
+
+#attemptsleft {
+    color: #e4b21b;
+    font-family: "RedactionBold";
+    font-size: 24px;
+    text-shadow: 0 0 8px #e4b21b80;
+}
