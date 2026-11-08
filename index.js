@@ -9,6 +9,9 @@ let gameBoard = document.getElementById("gameboard")
 let cardIcons = ["Moon", "Sun", "Hand", "Eye", "Skull", "Spider", "Ghost", "Zombie", "Bat", "Witch Hat", "Cauldron", "Spider Web", "Broom", "Gravestone", "Potion"]
 let matchesPossible = cardIcons.length
 let gameOver = false
+
+let restartButton = document.getElementById("restartbutton")
+
 let attemptsDisplay = document.getElementById("attemptsleft")
 attemptsDisplay.textContent = attemptsRemaining
 
@@ -88,3 +91,22 @@ for (let i = 0; i < gameDeck.length; i++) {
     }
     })
     }
+
+    function resetGame() {
+        gameBoard.innerHTML = ""
+
+        matchedCount = 0
+        attemptsRemaining = 25
+        chosenCards = []
+        lockBoard = false
+        gameOver = false
+        timeleft = 10
+
+        attemptsDisplay.textContent = attemptsRemaining
+        matchesDisplay.textContent = matchesPossible - matchedCount
+        timeDisplay.textContent = timeLeft
+    }
+
+    restartButton.addEventListener("click", () => {
+        resetGame()
+    })
