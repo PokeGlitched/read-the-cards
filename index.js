@@ -112,10 +112,15 @@ function resetGame() {
         matchesDisplay.textContent = matchesPossible - matchedCount
         timeDisplay.textContent = timeLeft
 
-        endScreen.classList.add("hidden")
-    }
+        buildBoard()
 
-    restartButton.addEventListener("click", () => {
-        resetGame()
-    })
+        endScreen.classList.add("hidden")
+        
+}
+
+restartButton.addEventListener("click", () => {
+    resetGame()
+})
+
+buildBoard()
 
