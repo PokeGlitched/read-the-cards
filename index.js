@@ -27,7 +27,7 @@ let iconImages = {
     "Spider": "assets/icons/icon_spider.png",
     "Spider Web":  "assets/icons/icon_spiderweb.png",
     "Sun":  "assets/icons/icon_sun.png",
-    "Witch Hat": "assets/icons/icon_witchhat.pngbroom", 
+    "Witch Hat": "assets/icons/icon_witchhat.png", 
 }
 
 let timer 
