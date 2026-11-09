@@ -13,6 +13,8 @@ let winOrLoseDisplay = document.getElementById("winorlosehere")
 let explanDisplay = document.getElementById("justincase")
 
 let iconImages = {
+    "Bat": "assets/icons/icon_bat.png",
+    "Broom": "assets/icons/icon_broom.png",
     "Cauldron":  "assets/icons/icon_cauldron.png",
     "Chalice": "assets/icons/icon_chalice.png",
     "Eye": "assets/icons/icon_eye.png",
@@ -26,7 +28,6 @@ let iconImages = {
     "Spider Web":  "assets/icons/icon_spiderweb.png",
     "Sun":  "assets/icons/icon_sun.png",
     "Witch Hat": "assets/icons/icon_witchhat.pngbroom", 
-    // missing bat and broom somehow??? did i delete them by accident?? check on this afterwards.
 }
 
 let timer 
