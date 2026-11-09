@@ -13,19 +13,19 @@ let winOrLoseDisplay = document.getElementById("winorlosehere")
 let explanDisplay = document.getElementById("justincase")
 
 let iconImages = {
-    "Eye": "assets/icons/icon_eye.png",
+    "Cauldron":  "assets/icons/icon_cauldron.png",
     "Chalice": "assets/icons/icon_chalice.png",
+    "Eye": "assets/icons/icon_eye.png",
     "Ghost": "assets/icons/icon_ghost.png",
+    "Gravestone":  "assets/icons/icon_gravestone.png",
+    "Moon":  "assets/icons/icon_moon.png",
     "Potion": "assets/icons/icon_potion.png",
     "Skull": "assets/icons/icon_skull.png",
     "Snake": "assets/icons/icon_skull.png",
     "Spider": "assets/icons/icon_spider.png",
-    "Witch Hat": "assets/icons/icon_witchhat.pngbroom", 
-    "Sun":  "assets/icons/icon_sun.png",
-    "Moon":  "assets/icons/icon_moon.png",
-    "Cauldron":  "assets/icons/icon_cauldron.png",
     "Spider Web":  "assets/icons/icon_spiderweb.png",
-    "Gravestone":  "assets/icons/icon_gravestone.png",
+    "Sun":  "assets/icons/icon_sun.png",
+    "Witch Hat": "assets/icons/icon_witchhat.pngbroom", 
 }
 
 let timer 
