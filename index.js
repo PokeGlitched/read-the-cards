@@ -26,6 +26,7 @@ let iconImages = {
     "Spider Web":  "assets/icons/icon_spiderweb.png",
     "Sun":  "assets/icons/icon_sun.png",
     "Witch Hat": "assets/icons/icon_witchhat.pngbroom", 
+    // missing bat and broom somehow??? did i delete them by accident?? check on this afterwards.
 }
 
 let timer 
